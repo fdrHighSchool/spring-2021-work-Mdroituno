@@ -10,8 +10,15 @@ public class Driver {
         arr1.set(2,7);
         arr1.set(3,1);
         System.out.println(arr1);
-        arr1.remove(0);
+        arr1.remove(2);
         System.out.println(arr1);
+
+        SuperArray arr2 = new SuperArray();
+        arr2.grow(3);
+        System.out.println(arr2.isEmpty());;
+        arr2.set(8, 9);
+        System.out.println(arr2.isEmpty());
+        System.out.println(arr2);
     }
     
 }
