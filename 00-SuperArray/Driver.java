@@ -14,11 +14,12 @@ public class Driver {
 
         SuperArray arr2 = new SuperArray();
         arr2.grow(3);
-        System.out.println(arr2);
+        System.out.println(arr2.getLength());
         System.out.println(arr2.isEmpty());;
         arr2.set(8, 9);
         System.out.println(arr2.isEmpty());
         System.out.println(arr2);
+        
     }
     
 }

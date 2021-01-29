@@ -77,6 +77,10 @@ public class SuperArray {
         this.array = temp;
     }//end remove method
 
+    public int getLength(){
+        return this.array.length;
+    }//end getLength method
+    
     public String toString(){
         return Arrays.toString(this.array);
     }//end toString method
