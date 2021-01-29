@@ -25,7 +25,7 @@ public class SuperArray {
             }   
         }
 
-       this.array = Arrays.copyOf(this.array, size + 1);
+       grow(1);
        this.array[size] = value;
        return;
     }//end add method
@@ -34,15 +34,19 @@ public class SuperArray {
         int size = this.array.length;
 
         if((size - index) < 1)
-            this.array = Arrays.copyOf(this.array, index + 1);
-            
+            grow(1);
+
         this.array[index] = value;
-    }//end addd method
+    }//end add method
 
     public void grow(int n){
         int size = this.array.length;
 
-        this.array = Arrays.copyOf(this.array, size + n);
+        int[] array2 = new int[size+n];
+        for(int i = 0; i < this.array.length; i++){
+            array2[i] = this.array[i];
+        }//end for
+        this.array = array2;
     }//end grow method
 
     public void set(int i, int val){
