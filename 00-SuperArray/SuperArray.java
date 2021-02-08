@@ -80,6 +80,10 @@ public class SuperArray {
     public int getLength(){
         return this.array.length;
     }//end getLength method
+
+    public int getInt(int i){
+        return this.array[i];
+    }//end getInt method
     
     public String toString(){
         return Arrays.toString(this.array);
