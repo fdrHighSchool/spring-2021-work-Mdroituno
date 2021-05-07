@@ -1,0 +1,14 @@
+public static boolean isMountain(int[] array){
+    peakIndex = getPeakIndex(int[] array);
+    if(peakIndex != -1){
+        for(int i = 0; i < peakIndex; i++){
+            if(array[i] < array[i+1]){
+                if(array[peakIndex + i] <= array[peakIndex + i + 1]){
+                    return false;
+                }
+                return true; 
+            }
+            return false; 
+        }
+    }
+}
