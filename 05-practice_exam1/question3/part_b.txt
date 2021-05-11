@@ -1,0 +1,20 @@
+public boolean updateAllTemps(double tolerance){
+    double[][] temps2;
+    boolean isTolerated = true;
+    for(int rows: temps.length-1){
+        for(int cols: temps[rows].length-1){
+            temps2 = computeTemp(rows, cols);
+            if(Math.abs(temps2[row][cols] - temps[row][cols]) > tolerance){
+                isTolerated = false;
+            }
+        }
+    }
+
+    for(int rows: temps2.length-1){
+        for(int cols: temps2[rows].length-1){
+            temp[rows][cols] = temps2[rows][cols];
+        }
+    }
+
+    return isTolerated;
+}
