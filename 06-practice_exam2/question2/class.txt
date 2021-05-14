@@ -1,0 +1,16 @@
+public class GameSpinner{
+    private int runs;
+    private int sectornum;
+    public GameSpinner(int sectors){
+        sectornum = sectors;
+    }
+
+    public int spin(){
+        runs++;
+        return Math.random() * sectornum;
+    }
+
+    public int currentRun(){
+        return runs;
+    }
+}
