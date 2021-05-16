@@ -1,0 +1,19 @@
+public class CombinedTable(){
+    private int seats; 
+    public CombinedTable(SingleTable t1, SingleTable t2){
+        seats = (t1.getNumSeats() + t2.getNumSeats()) - 2;
+    }
+
+    public boolean canSeat(int people){
+        return (people < seats);
+    }
+
+    public double getDesirability(){
+        if(t1.getHeight == t2.getHeight){
+            return (t1.getViewQuality() + t2.getViewQuality()) / 2;
+        }
+        else{
+            return ((t1.getViewQuality() + t2.getViewQuality()) / 2) - 10;
+        }
+    }
+}

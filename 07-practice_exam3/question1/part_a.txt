@@ -1,0 +1,11 @@
+public int scoreGuess(String guess){
+    int occurences = 0; 
+    guesslen = guess.length()
+    for(int i = 0; i < secret.length; i++){
+        if(secret.substring(i, i+guesslen).equals(guess)){
+            occurences++;
+        }
+    }
+
+    return occurences * guesslen * guesslen;
+}
