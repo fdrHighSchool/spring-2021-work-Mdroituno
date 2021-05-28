@@ -61,4 +61,17 @@ void draw() {
   triangle(120,205,120,185,100,185);
   fill(255,255,255);
   triangle(120,205,100,205,100,185);
+  
+ 
+  star(155,85);
+  star(55,105);
+  star(285,145);
+}
+
+void star(float centerX, float centerY){
+  stroke(255);
+  line(centerX,centerY+8,centerX,centerY-8);  
+  line(centerX-4,centerY-4,centerX+4,centerY+4);
+  line(centerX-4,centerY+4,centerX+4,centerY-4);
+  line(centerX-5,centerY,centerX+5,centerY);
 }
